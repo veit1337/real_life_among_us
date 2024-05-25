@@ -1,6 +1,7 @@
 \documentclass[a4paper, 12pt, oneside]{article}
 
 \include{includes/packages}
+\include{includes/settings}
 
 \begin{document}
 
@@ -8,4 +9,10 @@
 
 \include{includes/cover_sheet}
 \tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{section}{0}
+\include{chapter/01_introduction}
+\newpage
 \end{document}
