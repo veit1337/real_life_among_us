@@ -1,0 +1,26 @@
+\documentclass[a4paper, 12pt, oneside]{article}
+
+\include{includes/packages}
+\include{includes/settings}
+
+\begin{document}
+
+\pagenumbering{Roman}
+
+\include{includes/cover_sheet}
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{section}{0}
+\include{chapter/01_introduction}
+\include{chapter/02_among_us}
+\include{chapter/03_real_life_among_us}
+
+\pagenumbering{roman}
+\appendix
+\include{chapter/04_tasks}
+\include{chapter/05_texts}
+\include{chapter/06_sudokus}
+\include{includes/roles}
+\end{document}

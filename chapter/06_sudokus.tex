@@ -1,0 +1,567 @@
+\section{Sudokus}
+\newpage
+\begin{center}
+    
+\begin{tikzpicture}[x=5cm, y=2cm] 
+\def\cellwidth{3cm}
+\def\cellheight{3cm}
+
+% First row
+\draw[] (0, 0) rectangle (\cellwidth, -\cellheight);
+\node at (0.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, 0) rectangle (2*\cellwidth, -\cellheight);
+\node at (1.5*\cellwidth, -0.5*\cellheight) {\huge{3}};
+
+\draw[] (2*\cellwidth, 0) rectangle (3*\cellwidth, -\cellheight);
+\node at (2.5*\cellwidth, -0.5*\cellheight) {\huge{4}};
+
+\draw[] (3*\cellwidth, 0) rectangle (4*\cellwidth, -\cellheight);
+\node at (3.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+% Second row
+\draw[] (0, -\cellheight) rectangle (\cellwidth, -2*\cellheight);
+\node at (0.5*\cellwidth, -1.5*\cellheight) {\huge{4}};
+
+\draw[] (\cellwidth, -\cellheight) rectangle (2*\cellwidth, -2*\cellheight);
+\node at (1.5*\cellwidth, -1.5*\cellheight) {\huge{}};
+
+\draw[] (2*\cellwidth, -\cellheight) rectangle (3*\cellwidth, -2*\cellheight);
+\node at (2.5*\cellwidth, -1.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -\cellheight) rectangle (4*\cellwidth, -2*\cellheight);
+\node at (3.5*\cellwidth, -1.5*\cellheight){\huge{3}};
+
+% Third row
+\draw[] (0, -2*\cellheight) rectangle (\cellwidth, -3*\cellheight);
+\node at (0.5*\cellwidth, -2.5*\cellheight){\huge{1}};
+
+\draw[] (\cellwidth, -2*\cellheight) rectangle (2*\cellwidth, -3*\cellheight);
+\node at (1.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (2*\cellwidth, -2*\cellheight) rectangle (3*\cellwidth, -3*\cellheight);
+\node at (2.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -2*\cellheight) rectangle (4*\cellwidth, -3*\cellheight);
+\node at (3.5*\cellwidth, -2.5*\cellheight){\huge{3}};
+
+% Fourth row
+\draw[] (0, -3*\cellheight) rectangle (\cellwidth, -4*\cellheight);
+\node at (0.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, -3*\cellheight) rectangle (2*\cellwidth, -4*\cellheight);
+\node at (1.5*\cellwidth, -3.5*\cellheight) {\huge{2}};
+
+\draw[] (2*\cellwidth, -3*\cellheight) rectangle (3*\cellwidth, -4*\cellheight);
+\node at (2.5*\cellwidth, -3.5*\cellheight){\huge{1}};
+
+\draw[] (3*\cellwidth, -3*\cellheight) rectangle (4*\cellwidth, -4*\cellheight);
+\node at (3.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\end{tikzpicture}
+\end{center}
+\newpage
+
+
+\begin{center}
+    
+\begin{tikzpicture}[x=5cm, y=2cm] 
+\def\cellwidth{3cm}
+\def\cellheight{3cm}
+
+% First row
+\draw[] (0, 0) rectangle (\cellwidth, -\cellheight);
+\node at (0.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, 0) rectangle (2*\cellwidth, -\cellheight);
+\node at (1.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+\draw[] (2*\cellwidth, 0) rectangle (3*\cellwidth, -\cellheight);
+\node at (2.5*\cellwidth, -0.5*\cellheight) {\huge{4}};
+
+\draw[] (3*\cellwidth, 0) rectangle (4*\cellwidth, -\cellheight);
+\node at (3.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+% Second row
+\draw[] (0, -\cellheight) rectangle (\cellwidth, -2*\cellheight);
+\node at (0.5*\cellwidth, -1.5*\cellheight) {\huge{4}};
+
+\draw[] (\cellwidth, -\cellheight) rectangle (2*\cellwidth, -2*\cellheight);
+\node at (1.5*\cellwidth, -1.5*\cellheight) {\huge{}};
+
+\draw[] (2*\cellwidth, -\cellheight) rectangle (3*\cellwidth, -2*\cellheight);
+\node at (2.5*\cellwidth, -1.5*\cellheight){\huge{3}};
+
+\draw[] (3*\cellwidth, -\cellheight) rectangle (4*\cellwidth, -2*\cellheight);
+\node at (3.5*\cellwidth, -1.5*\cellheight){\huge{}};
+
+% Third row
+\draw[] (0, -2*\cellheight) rectangle (\cellwidth, -3*\cellheight);
+\node at (0.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (\cellwidth, -2*\cellheight) rectangle (2*\cellwidth, -3*\cellheight);
+\node at (1.5*\cellwidth, -2.5*\cellheight){\huge{4}};
+
+\draw[] (2*\cellwidth, -2*\cellheight) rectangle (3*\cellwidth, -3*\cellheight);
+\node at (2.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -2*\cellheight) rectangle (4*\cellwidth, -3*\cellheight);
+\node at (3.5*\cellwidth, -2.5*\cellheight){\huge{3}};
+
+% Fourth row
+\draw[] (0, -3*\cellheight) rectangle (\cellwidth, -4*\cellheight);
+\node at (0.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, -3*\cellheight) rectangle (2*\cellwidth, -4*\cellheight);
+\node at (1.5*\cellwidth, -3.5*\cellheight) {\huge{1}};
+
+\draw[] (2*\cellwidth, -3*\cellheight) rectangle (3*\cellwidth, -4*\cellheight);
+\node at (2.5*\cellwidth, -3.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -3*\cellheight) rectangle (4*\cellwidth, -4*\cellheight);
+\node at (3.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\end{tikzpicture}
+\end{center}
+\newpage
+
+
+
+\begin{center}
+    
+\begin{tikzpicture}[x=5cm, y=2cm] 
+\def\cellwidth{3cm}
+\def\cellheight{3cm}
+
+% First row
+\draw[] (0, 0) rectangle (\cellwidth, -\cellheight);
+\node at (0.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, 0) rectangle (2*\cellwidth, -\cellheight);
+\node at (1.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+\draw[] (2*\cellwidth, 0) rectangle (3*\cellwidth, -\cellheight);
+\node at (2.5*\cellwidth, -0.5*\cellheight) {\huge{1}};
+
+\draw[] (3*\cellwidth, 0) rectangle (4*\cellwidth, -\cellheight);
+\node at (3.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+% Second row
+\draw[] (0, -\cellheight) rectangle (\cellwidth, -2*\cellheight);
+\node at (0.5*\cellwidth, -1.5*\cellheight) {\huge{4}};
+
+\draw[] (\cellwidth, -\cellheight) rectangle (2*\cellwidth, -2*\cellheight);
+\node at (1.5*\cellwidth, -1.5*\cellheight) {\huge{}};
+
+\draw[] (2*\cellwidth, -\cellheight) rectangle (3*\cellwidth, -2*\cellheight);
+\node at (2.5*\cellwidth, -1.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -\cellheight) rectangle (4*\cellwidth, -2*\cellheight);
+\node at (3.5*\cellwidth, -1.5*\cellheight){\huge{}};
+
+% Third row
+\draw[] (0, -2*\cellheight) rectangle (\cellwidth, -3*\cellheight);
+\node at (0.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (\cellwidth, -2*\cellheight) rectangle (2*\cellwidth, -3*\cellheight);
+\node at (1.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (2*\cellwidth, -2*\cellheight) rectangle (3*\cellwidth, -3*\cellheight);
+\node at (2.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -2*\cellheight) rectangle (4*\cellwidth, -3*\cellheight);
+\node at (3.5*\cellwidth, -2.5*\cellheight){\huge{2}};
+
+% Fourth row
+\draw[] (0, -3*\cellheight) rectangle (\cellwidth, -4*\cellheight);
+\node at (0.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, -3*\cellheight) rectangle (2*\cellwidth, -4*\cellheight);
+\node at (1.5*\cellwidth, -3.5*\cellheight) {\huge{3}};
+
+\draw[] (2*\cellwidth, -3*\cellheight) rectangle (3*\cellwidth, -4*\cellheight);
+\node at (2.5*\cellwidth, -3.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -3*\cellheight) rectangle (4*\cellwidth, -4*\cellheight);
+\node at (3.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\end{tikzpicture}
+\end{center}
+\newpage
+
+
+
+\begin{center}
+    
+\begin{tikzpicture}[x=5cm, y=2cm] 
+\def\cellwidth{3cm}
+\def\cellheight{3cm}
+
+% First row
+\draw[] (0, 0) rectangle (\cellwidth, -\cellheight);
+\node at (0.5*\cellwidth, -0.5*\cellheight) {\huge{2}};
+
+\draw[] (\cellwidth, 0) rectangle (2*\cellwidth, -\cellheight);
+\node at (1.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+\draw[] (2*\cellwidth, 0) rectangle (3*\cellwidth, -\cellheight);
+\node at (2.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+\draw[] (3*\cellwidth, 0) rectangle (4*\cellwidth, -\cellheight);
+\node at (3.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+% Second row
+\draw[] (0, -\cellheight) rectangle (\cellwidth, -2*\cellheight);
+\node at (0.5*\cellwidth, -1.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, -\cellheight) rectangle (2*\cellwidth, -2*\cellheight);
+\node at (1.5*\cellwidth, -1.5*\cellheight) {\huge{}};
+
+\draw[] (2*\cellwidth, -\cellheight) rectangle (3*\cellwidth, -2*\cellheight);
+\node at (2.5*\cellwidth, -1.5*\cellheight){\huge{3}};
+
+\draw[] (3*\cellwidth, -\cellheight) rectangle (4*\cellwidth, -2*\cellheight);
+\node at (3.5*\cellwidth, -1.5*\cellheight){\huge{}};
+
+% Third row
+\draw[] (0, -2*\cellheight) rectangle (\cellwidth, -3*\cellheight);
+\node at (0.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (\cellwidth, -2*\cellheight) rectangle (2*\cellwidth, -3*\cellheight);
+\node at (1.5*\cellwidth, -2.5*\cellheight){\huge{4}};
+
+\draw[] (2*\cellwidth, -2*\cellheight) rectangle (3*\cellwidth, -3*\cellheight);
+\node at (2.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -2*\cellheight) rectangle (4*\cellwidth, -3*\cellheight);
+\node at (3.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+% Fourth row
+\draw[] (0, -3*\cellheight) rectangle (\cellwidth, -4*\cellheight);
+\node at (0.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, -3*\cellheight) rectangle (2*\cellwidth, -4*\cellheight);
+\node at (1.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\draw[] (2*\cellwidth, -3*\cellheight) rectangle (3*\cellwidth, -4*\cellheight);
+\node at (2.5*\cellwidth, -3.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -3*\cellheight) rectangle (4*\cellwidth, -4*\cellheight);
+\node at (3.5*\cellwidth, -3.5*\cellheight) {\huge{1}};
+
+\end{tikzpicture}
+\end{center}
+\newpage
+
+
+\begin{center}
+    
+\begin{tikzpicture}[x=5cm, y=2cm] 
+\def\cellwidth{3cm}
+\def\cellheight{3cm}
+
+% First row
+\draw[] (0, 0) rectangle (\cellwidth, -\cellheight);
+\node at (0.5*\cellwidth, -0.5*\cellheight) {\huge{1}};
+
+\draw[] (\cellwidth, 0) rectangle (2*\cellwidth, -\cellheight);
+\node at (1.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+\draw[] (2*\cellwidth, 0) rectangle (3*\cellwidth, -\cellheight);
+\node at (2.5*\cellwidth, -0.5*\cellheight) {\huge{4}};
+
+\draw[] (3*\cellwidth, 0) rectangle (4*\cellwidth, -\cellheight);
+\node at (3.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+% Second row
+\draw[] (0, -\cellheight) rectangle (\cellwidth, -2*\cellheight);
+\node at (0.5*\cellwidth, -1.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, -\cellheight) rectangle (2*\cellwidth, -2*\cellheight);
+\node at (1.5*\cellwidth, -1.5*\cellheight) {\huge{}};
+
+\draw[] (2*\cellwidth, -\cellheight) rectangle (3*\cellwidth, -2*\cellheight);
+\node at (2.5*\cellwidth, -1.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -\cellheight) rectangle (4*\cellwidth, -2*\cellheight);
+\node at (3.5*\cellwidth, -1.5*\cellheight){\huge{}};
+
+% Third row
+\draw[] (0, -2*\cellheight) rectangle (\cellwidth, -3*\cellheight);
+\node at (0.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (\cellwidth, -2*\cellheight) rectangle (2*\cellwidth, -3*\cellheight);
+\node at (1.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (2*\cellwidth, -2*\cellheight) rectangle (3*\cellwidth, -3*\cellheight);
+\node at (2.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -2*\cellheight) rectangle (4*\cellwidth, -3*\cellheight);
+\node at (3.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+% Fourth row
+\draw[] (0, -3*\cellheight) rectangle (\cellwidth, -4*\cellheight);
+\node at (0.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, -3*\cellheight) rectangle (2*\cellwidth, -4*\cellheight);
+\node at (1.5*\cellwidth, -3.5*\cellheight) {\huge{1}};
+
+\draw[] (2*\cellwidth, -3*\cellheight) rectangle (3*\cellwidth, -4*\cellheight);
+\node at (2.5*\cellwidth, -3.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -3*\cellheight) rectangle (4*\cellwidth, -4*\cellheight);
+\node at (3.5*\cellwidth, -3.5*\cellheight) {\huge{2}};
+
+\end{tikzpicture}
+\end{center}
+\newpage
+
+\begin{center}
+    
+\begin{tikzpicture}[x=5cm, y=2cm] 
+\def\cellwidth{3cm}
+\def\cellheight{3cm}
+
+% First row
+\draw[] (0, 0) rectangle (\cellwidth, -\cellheight);
+\node at (0.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, 0) rectangle (2*\cellwidth, -\cellheight);
+\node at (1.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+\draw[] (2*\cellwidth, 0) rectangle (3*\cellwidth, -\cellheight);
+\node at (2.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+\draw[] (3*\cellwidth, 0) rectangle (4*\cellwidth, -\cellheight);
+\node at (3.5*\cellwidth, -0.5*\cellheight) {\huge{3}};
+
+% Second row
+\draw[] (0, -\cellheight) rectangle (\cellwidth, -2*\cellheight);
+\node at (0.5*\cellwidth, -1.5*\cellheight) {\huge{3}};
+
+\draw[] (\cellwidth, -\cellheight) rectangle (2*\cellwidth, -2*\cellheight);
+\node at (1.5*\cellwidth, -1.5*\cellheight) {\huge{2}};
+
+\draw[] (2*\cellwidth, -\cellheight) rectangle (3*\cellwidth, -2*\cellheight);
+\node at (2.5*\cellwidth, -1.5*\cellheight){\huge{4}};
+
+\draw[] (3*\cellwidth, -\cellheight) rectangle (4*\cellwidth, -2*\cellheight);
+\node at (3.5*\cellwidth, -1.5*\cellheight){\huge{}};
+
+% Third row
+\draw[] (0, -2*\cellheight) rectangle (\cellwidth, -3*\cellheight);
+\node at (0.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (\cellwidth, -2*\cellheight) rectangle (2*\cellwidth, -3*\cellheight);
+\node at (1.5*\cellwidth, -2.5*\cellheight){\huge{4}};
+
+\draw[] (2*\cellwidth, -2*\cellheight) rectangle (3*\cellwidth, -3*\cellheight);
+\node at (2.5*\cellwidth, -2.5*\cellheight){\huge{3}};
+
+\draw[] (3*\cellwidth, -2*\cellheight) rectangle (4*\cellwidth, -3*\cellheight);
+\node at (3.5*\cellwidth, -2.5*\cellheight){\huge{2}};
+
+% Fourth row
+\draw[] (0, -3*\cellheight) rectangle (\cellwidth, -4*\cellheight);
+\node at (0.5*\cellwidth, -3.5*\cellheight) {\huge{2}};
+
+\draw[] (\cellwidth, -3*\cellheight) rectangle (2*\cellwidth, -4*\cellheight);
+\node at (1.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\draw[] (2*\cellwidth, -3*\cellheight) rectangle (3*\cellwidth, -4*\cellheight);
+\node at (2.5*\cellwidth, -3.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -3*\cellheight) rectangle (4*\cellwidth, -4*\cellheight);
+\node at (3.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\end{tikzpicture}
+\end{center}
+\newpage
+
+\begin{center}
+    
+\begin{tikzpicture}[x=5cm, y=2cm] 
+\def\cellwidth{3cm}
+\def\cellheight{3cm}
+
+% First row
+\draw[] (0, 0) rectangle (\cellwidth, -\cellheight);
+\node at (0.5*\cellwidth, -0.5*\cellheight) {\huge{3}};
+
+\draw[] (\cellwidth, 0) rectangle (2*\cellwidth, -\cellheight);
+\node at (1.5*\cellwidth, -0.5*\cellheight) {\huge{4}};
+
+\draw[] (2*\cellwidth, 0) rectangle (3*\cellwidth, -\cellheight);
+\node at (2.5*\cellwidth, -0.5*\cellheight) {\huge{1}};
+
+\draw[] (3*\cellwidth, 0) rectangle (4*\cellwidth, -\cellheight);
+\node at (3.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+% Second row
+\draw[] (0, -\cellheight) rectangle (\cellwidth, -2*\cellheight);
+\node at (0.5*\cellwidth, -1.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, -\cellheight) rectangle (2*\cellwidth, -2*\cellheight);
+\node at (1.5*\cellwidth, -1.5*\cellheight) {\huge{2}};
+
+\draw[] (2*\cellwidth, -\cellheight) rectangle (3*\cellwidth, -2*\cellheight);
+\node at (2.5*\cellwidth, -1.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -\cellheight) rectangle (4*\cellwidth, -2*\cellheight);
+\node at (3.5*\cellwidth, -1.5*\cellheight){\huge{}};
+
+% Third row
+\draw[] (0, -2*\cellheight) rectangle (\cellwidth, -3*\cellheight);
+\node at (0.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (\cellwidth, -2*\cellheight) rectangle (2*\cellwidth, -3*\cellheight);
+\node at (1.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (2*\cellwidth, -2*\cellheight) rectangle (3*\cellwidth, -3*\cellheight);
+\node at (2.5*\cellwidth, -2.5*\cellheight){\huge{2}};
+
+\draw[] (3*\cellwidth, -2*\cellheight) rectangle (4*\cellwidth, -3*\cellheight);
+\node at (3.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+% Fourth row
+\draw[] (0, -3*\cellheight) rectangle (\cellwidth, -4*\cellheight);
+\node at (0.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, -3*\cellheight) rectangle (2*\cellwidth, -4*\cellheight);
+\node at (1.5*\cellwidth, -3.5*\cellheight) {\huge{1}};
+
+\draw[] (2*\cellwidth, -3*\cellheight) rectangle (3*\cellwidth, -4*\cellheight);
+\node at (2.5*\cellwidth, -3.5*\cellheight){\huge{4}};
+
+\draw[] (3*\cellwidth, -3*\cellheight) rectangle (4*\cellwidth, -4*\cellheight);
+\node at (3.5*\cellwidth, -3.5*\cellheight) {\huge{3}};
+
+\end{tikzpicture}
+\end{center}
+\newpage
+
+
+\begin{center}
+    
+\begin{tikzpicture}[x=5cm, y=2cm] 
+\def\cellwidth{3cm}
+\def\cellheight{3cm}
+
+% First row
+\draw[] (0, 0) rectangle (\cellwidth, -\cellheight);
+\node at (0.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, 0) rectangle (2*\cellwidth, -\cellheight);
+\node at (1.5*\cellwidth, -0.5*\cellheight) {\huge{1}};
+
+\draw[] (2*\cellwidth, 0) rectangle (3*\cellwidth, -\cellheight);
+\node at (2.5*\cellwidth, -0.5*\cellheight) {\huge{3}};
+
+\draw[] (3*\cellwidth, 0) rectangle (4*\cellwidth, -\cellheight);
+\node at (3.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+% Second row
+\draw[] (0, -\cellheight) rectangle (\cellwidth, -2*\cellheight);
+\node at (0.5*\cellwidth, -1.5*\cellheight) {\huge{2}};
+
+\draw[] (\cellwidth, -\cellheight) rectangle (2*\cellwidth, -2*\cellheight);
+\node at (1.5*\cellwidth, -1.5*\cellheight) {\huge{}};
+
+\draw[] (2*\cellwidth, -\cellheight) rectangle (3*\cellwidth, -2*\cellheight);
+\node at (2.5*\cellwidth, -1.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -\cellheight) rectangle (4*\cellwidth, -2*\cellheight);
+\node at (3.5*\cellwidth, -1.5*\cellheight){\huge{}};
+
+% Third row
+\draw[] (0, -2*\cellheight) rectangle (\cellwidth, -3*\cellheight);
+\node at (0.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (\cellwidth, -2*\cellheight) rectangle (2*\cellwidth, -3*\cellheight);
+\node at (1.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (2*\cellwidth, -2*\cellheight) rectangle (3*\cellwidth, -3*\cellheight);
+\node at (2.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -2*\cellheight) rectangle (4*\cellwidth, -3*\cellheight);
+\node at (3.5*\cellwidth, -2.5*\cellheight){\huge{3}};
+
+% Fourth row
+\draw[] (0, -3*\cellheight) rectangle (\cellwidth, -4*\cellheight);
+\node at (0.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, -3*\cellheight) rectangle (2*\cellwidth, -4*\cellheight);
+\node at (1.5*\cellwidth, -3.5*\cellheight) {\huge{2}};
+
+\draw[] (2*\cellwidth, -3*\cellheight) rectangle (3*\cellwidth, -4*\cellheight);
+\node at (2.5*\cellwidth, -3.5*\cellheight){\huge{1}};
+
+\draw[] (3*\cellwidth, -3*\cellheight) rectangle (4*\cellwidth, -4*\cellheight);
+\node at (3.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\end{tikzpicture}
+\end{center}
+\newpage
+
+
+\begin{center}
+    
+\begin{tikzpicture}[x=5cm, y=2cm] 
+\def\cellwidth{3cm}
+\def\cellheight{3cm}
+
+% First row
+\draw[] (0, 0) rectangle (\cellwidth, -\cellheight);
+\node at (0.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, 0) rectangle (2*\cellwidth, -\cellheight);
+\node at (1.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+\draw[] (2*\cellwidth, 0) rectangle (3*\cellwidth, -\cellheight);
+\node at (2.5*\cellwidth, -0.5*\cellheight) {\huge{1}};
+
+\draw[] (3*\cellwidth, 0) rectangle (4*\cellwidth, -\cellheight);
+\node at (3.5*\cellwidth, -0.5*\cellheight) {\huge{}};
+
+% Second row
+\draw[] (0, -\cellheight) rectangle (\cellwidth, -2*\cellheight);
+\node at (0.5*\cellwidth, -1.5*\cellheight) {\huge{4}};
+
+\draw[] (\cellwidth, -\cellheight) rectangle (2*\cellwidth, -2*\cellheight);
+\node at (1.5*\cellwidth, -1.5*\cellheight) {\huge{}};
+
+\draw[] (2*\cellwidth, -\cellheight) rectangle (3*\cellwidth, -2*\cellheight);
+\node at (2.5*\cellwidth, -1.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -\cellheight) rectangle (4*\cellwidth, -2*\cellheight);
+\node at (3.5*\cellwidth, -1.5*\cellheight){\huge{}};
+
+% Third row
+\draw[] (0, -2*\cellheight) rectangle (\cellwidth, -3*\cellheight);
+\node at (0.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (\cellwidth, -2*\cellheight) rectangle (2*\cellwidth, -3*\cellheight);
+\node at (1.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (2*\cellwidth, -2*\cellheight) rectangle (3*\cellwidth, -3*\cellheight);
+\node at (2.5*\cellwidth, -2.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -2*\cellheight) rectangle (4*\cellwidth, -3*\cellheight);
+\node at (3.5*\cellwidth, -2.5*\cellheight){\huge{2}};
+
+% Fourth row
+\draw[] (0, -3*\cellheight) rectangle (\cellwidth, -4*\cellheight);
+\node at (0.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\draw[] (\cellwidth, -3*\cellheight) rectangle (2*\cellwidth, -4*\cellheight);
+\node at (1.5*\cellwidth, -3.5*\cellheight) {\huge{3}};
+
+\draw[] (2*\cellwidth, -3*\cellheight) rectangle (3*\cellwidth, -4*\cellheight);
+\node at (2.5*\cellwidth, -3.5*\cellheight){\huge{}};
+
+\draw[] (3*\cellwidth, -3*\cellheight) rectangle (4*\cellwidth, -4*\cellheight);
+\node at (3.5*\cellwidth, -3.5*\cellheight) {\huge{}};
+
+\end{tikzpicture}
+\end{center}
+\newpage
